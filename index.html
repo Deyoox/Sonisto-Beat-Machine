@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prism Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: ['class', '[data-theme="dark"]'],
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            colors: {
+              main: 'var(--bg-main)',
+              'text-main': 'var(--text-main)',
+              'text-light': 'var(--text-light)',
+              'accent': 'var(--accent)',
+            },
+            boxShadow: {
+              'soft-out': '5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light)',
+              'soft-in': 'inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light)',
+              'plate': '15px 15px 30px var(--shadow-plate-dark), -15px -15px 30px var(--shadow-plate-light)',
+              'led-glow': '0 0 10px var(--accent), 0 0 20px var(--accent)',
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)",
+              'brushed': "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzjwqonyQAWMUEF0A+EkAwEA8foM7WjCVW8AAAAASUVORK5CYII=')",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Light Mode Variables - Neutral Warm Grey */
+        --bg-main: #e0e0e0;
+        --text-main: #333333;
+        --text-light: #777777;
+        --accent: #ff6b00; /* Akai Orange */
+        
+        --shadow-light: #ffffff;
+        --shadow-dark: #bebebe;
+        
+        --shadow-plate-light: #ffffff;
+        --shadow-plate-dark: #b0b0b0;
+      }
+
+      [data-theme='dark'] {
+        /* Dark Mode Variables - Akai Hardware Dark */
+        --bg-main: #1a1a1a;
+        --text-main: #eeeeee;
+        --text-light: #888888;
+        --accent: #ff5500;
+
+        --shadow-light: #262626; 
+        --shadow-dark: #0f0f0f; 
+
+        --shadow-plate-light: #2a2a2a;
+        --shadow-plate-dark: #0a0a0a;
+      }
+
+      body {
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        font-family: 'Inter', sans-serif;
+        overflow: hidden;
+        height: 100vh;
+        transition: background-color 0.4s ease, color 0.4s ease;
+      }
+      
+      /* Smooth transitions for all neumorphic elements */
+      .bg-main, .shadow-soft-out, .shadow-soft-in, .shadow-plate {
+        transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease, color 0.4s ease;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--text-light); 
+        border-radius: 4px;
+        opacity: 0.5;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

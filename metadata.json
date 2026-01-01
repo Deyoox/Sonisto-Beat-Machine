@@ -1,0 +1,5 @@
+{
+  "name": "Prism Control",
+  "description": "A neumorphic/glasmorphic virtual MIDI controller. Import samples, tweak knobs, and play with your keyboard or physical MIDI device.",
+  "requestFramePermissions": []
+}
