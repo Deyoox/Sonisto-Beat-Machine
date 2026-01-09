@@ -56,7 +56,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ onClose }) => {
             </div>
 
             <div className="flex justify-center gap-4 w-full">
-                <SocialLink href="https://dovvnloading.github.io/" icon={Globe} label="Web" />
+                <SocialLink href="https://matt-wesney.github.io/website/" icon={Globe} label="Web" />
                 <SocialLink href="https://github.com/dovvnloading" icon={Github} label="Github" />
                 <SocialLink href="https://x.com/D3VAUX" icon={Twitter} label="X / Tw" />
             </div>
